@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Menu } from "lucide-react";
@@ -41,8 +41,11 @@ export default function Sidebar() {
             <Menu className="h-6 w-6" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="w-64">
-          <h2 className="text-xl font-bold mb-6">CRM SaaS</h2>
+        <SheetContent side="left" className="w-64 p-4">
+          <SheetHeader>
+            <SheetTitle>CRM SaaS</SheetTitle>
+          </SheetHeader>
+
           <nav className="flex flex-col gap-3">
             <Link href="/" onClick={() => setOpen(false)}>
               Home
